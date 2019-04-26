@@ -62,3 +62,40 @@ $ conda install -c r r-essentials rpy2
 
 Los datasets con los que estaremos trabajando se encuentran en https://drive.google.com/drive/folders/1yDFFyIiEf6wbA8LE7bVEBXBuz8Fq4dlv?usp=sharing. No todos son necesarios, la mayoría los usamos sólo en ejemplos.
 
+# Configuraciones para Centos
+
+```
+yum update -y
+```
+```
+yum install vim wget bzip2 git zip unzip -y
+```
+```
+wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
+```
+```
+bash Anaconda3-2018.12-Linux-x86_64.sh
+```
+```
+vim ~/.bashrc
+	# Set anaconda bin forlder in the PATH variable
+	export PATH=$PATH:/root/anaconda3/bin
+```
+```
+source ~/.bashrc
+```
+```
+git clone https://github.com/DiploDatos/AnalisisyVisualizacion.git
+```
+```
+cd AnalisisyVisualizacion
+```
+```
+conda create --name diplodatos python=3.6 anaconda
+```
+```
+source activate diplodatos
+```
+```
+jupyter notebook --ip=ip --allow-root 
+```
